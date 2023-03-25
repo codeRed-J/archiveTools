@@ -1,3 +1,4 @@
+"""Module for user blueprint initialization"""
 from flask import Blueprint
 
 user = Blueprint("user",

@@ -1,3 +1,5 @@
+"""Module for main blueprint initialization"""
+
 from flask import Blueprint
 
 main = Blueprint("main",
