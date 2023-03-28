@@ -1,5 +1,6 @@
 from datetime import datetime
-from typing import Self, Optional
+from typing import Optional
+from typing_extensions import Self
 
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
