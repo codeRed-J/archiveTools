@@ -3,7 +3,8 @@ from wtforms import EmailField, SubmitField, PasswordField
 from wtforms.validators import DataRequired, Email, EqualTo
 
 
-class Registration(FlaskForm):
+
+class RegistrationForm(FlaskForm):
     email = EmailField("Email", validators=[DataRequired(), Email()])
     password = PasswordField("Password",
                              validators=[DataRequired(),
@@ -13,7 +14,9 @@ class Registration(FlaskForm):
     submit = SubmitField("Register")
 
 
-class Login(FlaskForm):
+
+class LoginForm(FlaskForm):
     email = EmailField("Email", validators=[DataRequired(), Email()])
     password = PasswordField("Password", validators=[DataRequired()])
+    login = SubmitField("Login")
 
