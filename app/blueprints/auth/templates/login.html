@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% from 'bootstrap5/form.html' import render_form %}
+
+{% block header %}Login{% endblock %}
+{% block body %}
+
+  {{ render_form(form) }}
+
+  <!-- Register buttons -->
+  <div class="text-center">
+    <p>Not a member?
+      <a href="{{ url_for('auth.register')}}">Register</a>
+    </p>
+  </div>
+
+{% endblock %}
