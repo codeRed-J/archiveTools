@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  {% block head %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="{{url_for('static', filename='favicon.png')}}" type="image/x-icon">
+  {% block styles %}
+  {{ bootstrap.load_css() }}
+  {% endblock %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+  <title>archiveTools</title>
+  {% endblock %}
+</head>
+<body>
+<div class="container">
+  <div class="text-center pt-lg-5 pb-lg-5">
+    <h1 class="display-5">
+      {% block header %}{% endblock %}
+    </h1>
+  </div>
+  {% block body %}{% endblock %}
+</div>
+{% block scripts %}
+{{ bootstrap.load_js() }}
+{% endblock %}
+</body>
+</html>
